@@ -17,6 +17,8 @@
 		/>
 		<link rel="stylesheet" href="./assets/css/base.css" />
 		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/grid.css" />
+		<link rel="stylesheet" href="./assets/css/responsive.css" />
 		<link
 			rel="stylesheet"
 			href="./assets/fonts/fontawesome-free-6.1.2/css/all.min.css"
@@ -25,8 +27,8 @@
 	<body>
 		<div class="app">
 			<header class="header">
-				<div class="grid">
-					<nav class="header__navbar">
+				<div class="grid wide">
+					<nav class="header__navbar hide-on-mobile-tablet">
 						<ul class="header__navbar-list">
 							<li
 								class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate"
@@ -203,7 +205,11 @@
 					</nav>
 					<!-- HEADER WITH SEARCH -->
 					<div class="header-with-search">
-						<div class="header__logo">
+						<label for="mobile-search-checkbox" class="header__mobile-search">
+							<i class="fas fa-search header-with-search-icon"> </i>
+						</label>
+
+						<div class="header__logo hide-on-tablet">
 							<a href="/" class="header__logo-link">
 								<svg viewBox="0 0 192 65" class="header__logo-img">
 									<g fill-rule="evenodd">
@@ -215,6 +221,14 @@
 								</svg>
 							</a>
 						</div>
+
+						<input
+							type="checkbox"
+							hidden
+							id="mobile-search-checkbox"
+							class="header__search-checkbox"
+						/>
+
 						<div class="header__search">
 							<div class="header__search-input-wrap">
 								<input
@@ -372,10 +386,24 @@
 						</div>
 					</div>
 				</div>
+				<ul class="header__sort-bar">
+					<li class="header__sort-item">
+						<a href="" class="header__sort-link">Liên quan</a>
+					</li>
+					<li class="header__sort-item header__sort-item--active">
+						<a href="" class="header__sort-link">Mới nhất</a>
+					</li>
+					<li class="header__sort-item">
+						<a href="" class="header__sort-link">Bán chạy</a>
+					</li>
+					<li class="header__sort-item">
+						<a href="" class="header__sort-link">Giá</a>
+					</li>
+				</ul>
 			</header>
 
 			<div class="app__container">
-				<div class="grid">
+				<div class="grid wide">
 					<div class="grid__row app__content">
 						<div class="grid__column-2">
 							<nav class="category">
@@ -396,7 +424,7 @@
 						</div>
 
 						<div class="grid__column-10">
-							<div class="home-filter">
+							<div class="home-filter hide-on-mobile-tablet">
 								<span class="home-filter__label"> Sắp xếp theo </span>
 								<button class="home-filter__btn btn">Phổ biến</button>
 								<button class="home-filter__btn btn btn--primary">
@@ -1257,7 +1285,7 @@
 			</div>
 
 			<footer class="footer">
-				<div class="grid">
+				<div class="grid wide">
 					<div class="grid__row">
 						<div class="grid__column-2-4">
 							<h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -1375,7 +1403,7 @@
 				</div>
 
 				<div class="footer__bottom">
-					<div class="grid">
+					<div class="grid wide">
 						<p class="footer__text">© 2022 - Bản quyền thuộc về công ty ABC</p>
 					</div>
 				</div>
